@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "primordial:amber_block",
+    "primordial:amber_ore",
+    "primordial:deepslate_amber_ore"
+  ]
+}

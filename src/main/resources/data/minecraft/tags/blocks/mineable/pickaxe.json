@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "primordial:amber_block",
+    "primordial:amber_ore",
+    "primordial:deepslate_amber_ore",
+    "primordial:siltstone",
+    "primordial:shale",
+    "primordial:limestone",
+    "primordial:marble",
+    "primordial:mudstone",
+    "primordial:gypsum",
+    "primordial:black_sandstone",
+    "primordial:chiseled_black_sandstone",
+    "primordial:cut_black_sandstone",
+    "primordial:smooth_black_sandstone",
+    "primordial:white_sandstone",
+    "primordial:chiseled_white_sandstone",
+    "primordial:cut_white_sandstone",
+    "primordial:smooth_white_sandstone"
+
+
+
+
+  ]
+}

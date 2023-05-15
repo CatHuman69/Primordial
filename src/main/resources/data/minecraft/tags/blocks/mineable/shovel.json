@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "primordial:dirt_moss",
+    "primordial:peat",
+    "primordial:loam",
+    "primordial:silt",
+    "primordial:black_sand",
+    "primordial:white_sand",
+    "primordial:dried_salt"
+
+  ]
+}
