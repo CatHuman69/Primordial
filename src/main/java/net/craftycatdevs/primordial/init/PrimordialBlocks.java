@@ -1,14 +1,16 @@
 package net.craftycatdevs.primordial.init;
 
 import net.craftycatdevs.primordial.Primordial;
+import net.craftycatdevs.primordial.common.block.LogBlockPrimordial;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SandBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -74,17 +76,69 @@ public class PrimordialBlocks {
     public static final RegistryObject<Block> DRIED_SALT = registerBlock("dried_salt",
             () -> new Block(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.COLOR_GRAY).strength(0.5F).sound(SoundType.GRAVEL)));
     public static final RegistryObject<Block> POLISHED_SILTSTONE  = registerBlock("polished_siltstone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> POLISHED_LIMESTONE  = registerBlock("polished_limestone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> POLISHED_SHALE  = registerBlock("polished_shale",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> POLISHED_CHALK  = registerBlock("polished_chalk",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> POLISHED_MUDSTONE  = registerBlock("polished_mudstone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
+    public static final RegistryObject<Block> SEQUOIADENDRON_LOG = registerBlock("sequoiadendron_log",
+            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.SPRUCE_LOG).strength(2F).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> SEQUOIADENDRON_WOOD = registerBlock("sequoiadendron_wood",
+            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD).strength(2F).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> STRIPPED_SEQUOIADENDRON_LOG = registerBlock("stripped_sequoiadendron_log",
+            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_LOG).strength(2F).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> STRIPPED_SEQUOIADENDRON_WOOD = registerBlock("stripped_sequoiadendron_wood",
+            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_WOOD).strength(2F).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> SEQUOIADENDRON_PLANKS = registerBlock("sequoiadendron_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS).strength(2F).sound(SoundType.WOOD)){
+
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+            });
+
+    public static final RegistryObject<Block> SEQUOIADENDRON_LEAVES = registerBlock("sequoiadendron_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_LEAVES).strength(2F).sound(SoundType.GRASS)){
+
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+            });
+
+    public static final RegistryObject<Block> SEQUOIADENDRON_SAPLING = registerBlock("sequoiadendron_sapling",
+            () -> new SaplingBlock(null, BlockBehaviour.Properties.copy(Blocks.SPRUCE_SAPLING).sound(SoundType.GRASS)));
 
 
 
