@@ -1,16 +1,14 @@
 package net.craftycatdevs.primordial.init;
 
 import net.craftycatdevs.primordial.Primordial;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.grower.AbstractTreeGrower;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.SandBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -50,7 +48,7 @@ public class PrimordialBlocks {
     public static final RegistryObject<Block> LOAM = registerBlock("loam",
             () -> new Block(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_BROWN).strength(0.5F).sound(SoundType.GRAVEL)));
     public static final RegistryObject<Block> SILT = registerBlock("silt",
-            () -> new SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).strength(0.5F).sound(SoundType.SAND)))
+            () -> new SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).strength(0.5F).sound(SoundType.SAND)));
     public static final RegistryObject<Block> PEAT = registerBlock("peat",
             () -> new Block(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_BLACK).strength(0.5F).sound(SoundType.GRAVEL)));
     public static final RegistryObject<Block> BLACK_SAND = registerBlock("black_sand",
@@ -86,45 +84,6 @@ public class PrimordialBlocks {
     public static final RegistryObject<Block> POLISHED_MUDSTONE  = registerBlock("polished_mudstone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops()));
 
-    public static final RegistryObject<Block> SEQUOIA_LEAVES = registerBlock("sequoia_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_LEAVES)) {
-
-    @Override
-    public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-        return true;
-    }
-
-    @Override
-    public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-        return 30;
-    }
-
-    @Override
-    public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-        return 60;
-    }
-});
-
-    public static final RegistryObject<Block> SEQUOIA_SAPLING = registerBlock("sequoia_sapling",
-            () -> new SaplingBlock(new EbonyTreeGrower(), BlockBehaviour.Properties.copy(Blocks.SPRUCE_SAPLING)));
-
-
-    public static final RegistryObject<Block> SEQUOIA_SAPLING = registerBlock("sequoia_sapling",
-            () -> new SaplingBlockPrimordial((AbstractTreeGrower)new RedwoodTree(), BlockBehaviour.Properties.m_60939_((Material)Material.f_76300_).m_60910_().m_60977_().m_60966_().m_60918_(SoundType.f_56740_)), ;
-
-
-
-    public static final RegistryObject<Block> SEQUOIA_LOG = registerBlock((),
-        -> new SaplingBlock((AbstractTreeGrower)new RedwoodTree(), BlockBehaviour.Properties.m_60939_((Material)Material.f_76300_).m_60910_().m_60977_().m_60966_().m_60918_(SoundType.f_56740_)), "sequoia_sapling");
-
-    public static final RegistryObject<Block> STRIPPED_SEQUOIA_LOG = registerBlock((),
-        -> new SaplingBlock((AbstractTreeGrower)new RedwoodTree(), BlockBehaviour.Properties.m_60939_((Material)Material.f_76300_).m_60910_().m_60977_().m_60966_().m_60918_(SoundType.f_56740_)), "sequoia_sapling");
-
-    public static final RegistryObject<Block> SEQUOIA_WOOD = registerBlock((),
-        -> new SaplingBlock((AbstractTreeGrower)new RedwoodTree(), BlockBehaviour.Properties.m_60939_((Material)Material.f_76300_).m_60910_().m_60977_().m_60966_().m_60918_(SoundType.f_56740_)), "sequoia_sapling");
-
-    public static final RegistryObject<Block> STRIPPED_SEQUOIA_WOOD = registerBlock((),
-        -> new SaplingBlock((AbstractTreeGrower)new RedwoodTree(), BlockBehaviour.Properties.m_60939_((Material)Material.f_76300_).m_60910_().m_60977_().m_60966_().m_60918_(SoundType.f_56740_)), "sequoia_sapling");
 
 
 
