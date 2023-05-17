@@ -54,25 +54,25 @@ public class PrimordialBlocks {
     public static final RegistryObject<Block> PEAT = registerBlock("peat",
             () -> new Block(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_BLACK).strength(0.5F).sound(SoundType.GRAVEL)));
     public static final RegistryObject<Block> BLACK_SAND = registerBlock("black_sand",
-            () -> new SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).strength(0.5F).sound(SoundType.SAND)));
+            () -> new SandBlock(14406560, BlockBehaviour.Properties.copy(Blocks.SAND).strength(0.5F).sound(SoundType.SAND)));
     public static final RegistryObject<Block> BLACK_SANDSTONE = registerBlock("black_sandstone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SANDSTONE).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
     public static final RegistryObject<Block> CHISELED_BLACK_SANDSTONE = registerBlock("chiseled_black_sandstone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CHISELED_SANDSTONE).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
     public static final RegistryObject<Block> CUT_BLACK_SANDSTONE = registerBlock("cut_black_sandstone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CUT_SANDSTONE).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
     public static final RegistryObject<Block> SMOOTH_BLACK_SANDSTONE = registerBlock("smooth_black_sandstone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_SANDSTONE).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
     public static final RegistryObject<Block> WHITE_SAND = registerBlock("white_sand",
             () -> new SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).strength(0.5F).sound(SoundType.SAND)));
     public static final RegistryObject<Block> WHITE_SANDSTONE = registerBlock("white_sandstone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
     public static final RegistryObject<Block> CHISELED_WHITE_SANDSTONE = registerBlock("chiseled_white_sandstone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SANDSTONE).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
     public static final RegistryObject<Block> CUT_WHITE_SANDSTONE = registerBlock("cut_white_sandstone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CUT_SANDSTONE).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
     public static final RegistryObject<Block> SMOOTH_WHITE_SANDSTONE = registerBlock("smooth_white_sandstone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_SANDSTONE).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
     public static final RegistryObject<Block> DRIED_SALT = registerBlock("dried_salt",
             () -> new Block(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.COLOR_GRAY).strength(0.5F).sound(SoundType.GRAVEL)));
     public static final RegistryObject<Block> POLISHED_SILTSTONE  = registerBlock("polished_siltstone",

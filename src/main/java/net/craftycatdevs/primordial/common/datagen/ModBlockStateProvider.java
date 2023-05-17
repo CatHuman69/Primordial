@@ -11,8 +11,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class PrimordialBlockStateProvider extends BlockStateProvider {
-    public PrimordialBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+public class ModBlockStateProvider extends BlockStateProvider {
+    public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, Primordial.MODID, exFileHelper);
     }
 
@@ -22,10 +22,6 @@ public class PrimordialBlockStateProvider extends BlockStateProvider {
         blockWithItem(PrimordialBlocks.AMBER_ORE);
         blockWithItem(PrimordialBlocks.DEEPSLATE_AMBER_ORE);
         blockWithItem(PrimordialBlocks.BLACK_SAND);
-        blockWithItem(PrimordialBlocks.BLACK_SANDSTONE);
-        blockWithItem(PrimordialBlocks.CHISELED_BLACK_SANDSTONE);
-        blockWithItem(PrimordialBlocks.CUT_BLACK_SANDSTONE);
-        blockWithItem(PrimordialBlocks.SMOOTH_BLACK_SANDSTONE);
         blockWithItem(PrimordialBlocks.SILTSTONE);
         blockWithItem(PrimordialBlocks.GYPSUM);
         blockWithItem(PrimordialBlocks.CHALK);
@@ -36,12 +32,7 @@ public class PrimordialBlockStateProvider extends BlockStateProvider {
         blockWithItem(PrimordialBlocks.PEAT);
         blockWithItem(PrimordialBlocks.DRIED_SALT);
         blockWithItem(PrimordialBlocks.SILT);
-        blockWithItem(PrimordialBlocks.DIRT_MOSS);
         blockWithItem(PrimordialBlocks.WHITE_SAND);
-        blockWithItem(PrimordialBlocks.WHITE_SANDSTONE);
-        blockWithItem(PrimordialBlocks.CHISELED_WHITE_SANDSTONE);
-        blockWithItem(PrimordialBlocks.CUT_WHITE_SANDSTONE);
-        blockWithItem(PrimordialBlocks.SMOOTH_WHITE_SANDSTONE);
         blockWithItem(PrimordialBlocks.POLISHED_CHALK);
         blockWithItem(PrimordialBlocks.POLISHED_LIMESTONE);
         blockWithItem(PrimordialBlocks.POLISHED_MUDSTONE);

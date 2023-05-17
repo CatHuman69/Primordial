@@ -16,7 +16,7 @@ public class DataGenerators {
         PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
-        generator.addProvider(true, new PrimordialBlockStateProvider(packOutput, existingFileHelper));
-        generator.addProvider(true, new PrimordialItemModelProvider(packOutput, existingFileHelper));
+        generator.addProvider(true, new ModBlockStateProvider(packOutput, existingFileHelper));
+        generator.addProvider(true, new ModItemModelProvider(packOutput, existingFileHelper));
     }
 }
