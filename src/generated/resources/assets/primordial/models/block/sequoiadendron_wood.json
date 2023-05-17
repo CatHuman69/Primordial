@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "primordial:block/sequoiadendron_log",
+    "side": "primordial:block/sequoiadendron_log"
+  }
+}

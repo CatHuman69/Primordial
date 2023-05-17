@@ -50,10 +50,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(PrimordialBlocks.SEQUOIADENDRON_LEAVES);
         saplingBlock(PrimordialBlocks.SEQUOIADENDRON_SAPLING);
 
-        simpleBlockItem(PrimordialBlocks.SEQUOIADENDRON_LOG.get(), models().withExistingParent("Primordial:sequoiadendron_log", "minecraft:block/cube_column"));
-        simpleBlockItem(PrimordialBlocks.SEQUOIADENDRON_WOOD.get(), models().withExistingParent("Primordial:sequoiadendron_wood", "minecraft:block/cube_column"));
-        simpleBlockItem(PrimordialBlocks.STRIPPED_SEQUOIADENDRON_LOG.get(), models().withExistingParent("Primordial:stripped_sequoiadendron_log", "minecraft:block/cube_column"));
-        simpleBlockItem(PrimordialBlocks.STRIPPED_SEQUOIADENDRON_WOOD.get(), models().withExistingParent("Primordial:stripped_Ssequoiadendron_log", "minecraft:block/cube_column"));
+        simpleBlockItem(PrimordialBlocks.SEQUOIADENDRON_LOG.get(), models().withExistingParent("primordial:sequoiadendron_log", "minecraft:block/cube_column"));
+        simpleBlockItem(PrimordialBlocks.SEQUOIADENDRON_WOOD.get(), models().withExistingParent("primordial:sequoiadendron_wood", "minecraft:block/cube_column"));
+        simpleBlockItem(PrimordialBlocks.STRIPPED_SEQUOIADENDRON_LOG.get(), models().withExistingParent("primordial:stripped_sequoiadendron_log", "minecraft:block/cube_column"));
+        simpleBlockItem(PrimordialBlocks.STRIPPED_SEQUOIADENDRON_WOOD.get(), models().withExistingParent("primordial:stripped_sequoiadendron_log", "minecraft:block/cube_column"));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
