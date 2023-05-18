@@ -1,7 +1,8 @@
 {
-  "variants": {
-    "": {
-      "model": "primordial:block/smooth_black_sandstone"
-    }
+  "parent": "primordial:block/cube_bottom_top",
+  "textures": {
+    "bottom": "primordial:block/black_sandstone_top",
+    "side": "primordial:block/black_sandstone_top",
+    "top": "primordial:block/black_sandstone_top"
   }
 }
