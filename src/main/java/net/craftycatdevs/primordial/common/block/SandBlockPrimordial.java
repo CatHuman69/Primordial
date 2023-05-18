@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class SandBlockPrimordial extends FallingBlock {
     private final int dustColor;
 
-    public SandBlockPrimordial(int p_55967_, BlockBehaviour.Properties properties) {
+    public SandBlockPrimordial(int p_55967_, Properties properties) {
         super(properties);
         this.dustColor = p_55967_;
     }

@@ -1,8 +1,5 @@
 {
-  "parent": "primordial:block/cube_bottom_top",
-  "textures": {
-    "bottom": "primordial:block/white_sandstone_bottom",
-    "side": "primordial:block/white_sandstone",
-    "top": "primordial:block/white_sandstone_top"
+  "variants": {
+    "": { "model": "primordial:block/white_sandstone" }
   }
 }
