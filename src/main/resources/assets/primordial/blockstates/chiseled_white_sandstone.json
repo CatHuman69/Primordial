@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "": { "model": "primordial:block/chiseled_white_sandstone" }
+  "variants": {
+    "": {
+      "model": "primordial:block/chiseled_white_sandstone"
     }
+  }
 }

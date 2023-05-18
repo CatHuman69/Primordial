@@ -20,6 +20,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(PrimordialItems.AMBER);
         simpleItem(PrimordialItems.AMBER_APHID);
         simpleItem(PrimordialItems.AMBER_MOSQUITO);
+        simpleItem(PrimordialItems.GYPSUM_POWDER);
 
     }
 

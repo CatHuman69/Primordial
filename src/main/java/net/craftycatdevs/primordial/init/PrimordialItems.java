@@ -10,15 +10,17 @@ import net.minecraftforge.registries.RegistryObject;
 public class PrimordialItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Primordial.MODID);
-
     public static final RegistryObject<Item> AMBER = ITEMS.register("amber",
             () -> new Item(new Item.Properties()));
-
     public static final RegistryObject<Item> AMBER_MOSQUITO = ITEMS.register("amber_mosquito",
             () -> new Item(new Item.Properties()));
-
     public static final RegistryObject<Item> AMBER_APHID = ITEMS.register("amber_aphid",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> GYPSUM_POWDER = ITEMS.register("gypsum_powder",
+            () -> new Item(new Item.Properties()));
+
+
 
 
     public static void register(IEventBus eventBus) {

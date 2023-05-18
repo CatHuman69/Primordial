@@ -41,6 +41,13 @@
   "block.primordial.chiseled_white_sandstone": "Chiseled White Sandstone",
   "block.primordial.cut_white_sandstone": "Cut White Sandstone",
   "block.primordial.smooth_white_sandstone": "Smooth White Sandstone",
+  "block.primordial.sequoiadendron_sapling": "Sequoiadendron Sapling",
+  "block.primordial.sequoiadendron_planks": "Sequoiadendron Planks",
+  "block.primordial.sequoiadendron_log": "Sequoiadendron Log",
+  "block.primordial.sequoiadendron_wood": "Sequoiadendron Wood",
+  "block.primordial.stripped_sequoiadendron_log": "Stripped Sequoiadendron Log",
+  "block.primordial.stripped_sequoiadendron_wood": "Stripped Sequoiadendron Wood",
+  "block.primordial.sequoiadendron_leaves": "Sequoiadendron Leaves",
 
  "creativemodetab.primordial_miscellaneous" : "Primordial Miscellaneous",
   "creativemodetab.primordial_blocks": "Primordial Blocks"

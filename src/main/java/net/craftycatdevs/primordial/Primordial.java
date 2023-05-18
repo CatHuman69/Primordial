@@ -45,6 +45,7 @@ public class Primordial {
             event.accept(PrimordialItems.AMBER);
             event.accept(PrimordialItems.AMBER_MOSQUITO);
             event.accept(PrimordialItems.AMBER_APHID);
+            event.accept(PrimordialItems.GYPSUM_POWDER);
         }
 
         if(event.getTab() == PrimordialCreativeModeTabs.PRIMORDIAL_BLOCKS) {
@@ -76,7 +77,13 @@ public class Primordial {
             event.accept(PrimordialBlocks.POLISHED_MUDSTONE);
             event.accept(PrimordialBlocks.POLISHED_SILTSTONE);
             event.accept(PrimordialBlocks.POLISHED_CHALK);
-            event.accept(PrimordialBlocks.POLISHED_LIMESTONE);
+            event.accept(PrimordialBlocks.SEQUOIADENDRON_LEAVES);
+            event.accept(PrimordialBlocks.SEQUOIADENDRON_LOG);
+            event.accept(PrimordialBlocks.SEQUOIADENDRON_WOOD);
+            event.accept(PrimordialBlocks.STRIPPED_SEQUOIADENDRON_LOG);
+            event.accept(PrimordialBlocks.STRIPPED_SEQUOIADENDRON_WOOD);
+            event.accept(PrimordialBlocks.SEQUOIADENDRON_PLANKS);
+            event.accept(PrimordialBlocks.SEQUOIADENDRON_SAPLING);
 
 
         }

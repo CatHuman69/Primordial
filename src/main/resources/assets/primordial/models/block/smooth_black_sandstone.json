@@ -1,6 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "primordial:block/black_sandstone_top"
-    }
-}

@@ -2,6 +2,7 @@ package net.craftycatdevs.primordial.init;
 
 import net.craftycatdevs.primordial.Primordial;
 import net.craftycatdevs.primordial.common.block.LogBlockPrimordial;
+import net.craftycatdevs.primordial.common.worldgen.feature.tree.SequoiadendronTreeFeature;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -44,7 +45,7 @@ public class PrimordialBlocks {
     public static final RegistryObject<Block> MUDSTONE = registerBlock("mudstone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> GYPSUM = registerBlock("gypsum",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DIRT_MOSS = registerBlock("dirt_moss",
             () -> new Block(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_GREEN).strength(0.6F).sound(SoundType.ROOTED_DIRT)));
     public static final RegistryObject<Block> LOAM = registerBlock("loam",
@@ -74,7 +75,7 @@ public class PrimordialBlocks {
     public static final RegistryObject<Block> SMOOTH_WHITE_SANDSTONE = registerBlock("smooth_white_sandstone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_SANDSTONE).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
     public static final RegistryObject<Block> DRIED_SALT = registerBlock("dried_salt",
-            () -> new Block(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.COLOR_GRAY).strength(0.5F).sound(SoundType.GRAVEL)));
+            () -> new Block(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.COLOR_LIGHT_GRAY).strength(0.5F).sound(SoundType.GRAVEL)));
     public static final RegistryObject<Block> POLISHED_SILTSTONE  = registerBlock("polished_siltstone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> POLISHED_LIMESTONE  = registerBlock("polished_limestone",
@@ -138,7 +139,12 @@ public class PrimordialBlocks {
             });
 
     public static final RegistryObject<Block> SEQUOIADENDRON_SAPLING = registerBlock("sequoiadendron_sapling",
-            () -> new SaplingBlock(null, BlockBehaviour.Properties.copy(Blocks.SPRUCE_SAPLING).sound(SoundType.GRASS)));
+            () -> new SaplingBlock(new SequoiadendronTreeFeature(), BlockBehaviour.Properties.copy(Blocks.SPRUCE_SAPLING).sound(SoundType.GRASS)));
+
+    public static final RegistryObject<Block> REINFORCED_GLASS  = registerBlock("reinforced_glass",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(0.9F).sound(SoundType.GLASS).requiresCorrectToolForDrops()));
+
+
 
 
 

@@ -1,7 +1,7 @@
 {
   "variants": {
     "axis=x": {
-      "model": "primordial:block/stripped_sequoiadendron_wood_horizontal",
+      "model": "primordial:block/stripped_sequoiadendron_wood",
       "x": 90,
       "y": 90
     },
@@ -9,7 +9,7 @@
       "model": "primordial:block/stripped_sequoiadendron_wood"
     },
     "axis=z": {
-      "model": "primordial:block/stripped_sequoiadendron_wood_horizontal",
+      "model": "primordial:block/stripped_sequoiadendron_wood",
       "x": 90
     }
   }

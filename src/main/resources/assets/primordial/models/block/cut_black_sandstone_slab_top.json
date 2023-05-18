@@ -1,8 +1,0 @@
-{
-    "parent": "block/slab_top",
-    "textures": {
-        "bottom": "primordial:block/black_sandstone_top",
-        "top": "primordial:block/black_sandstone_top",
-        "side": "primordial:block/cut_black_sandstone"
-    }
-}
