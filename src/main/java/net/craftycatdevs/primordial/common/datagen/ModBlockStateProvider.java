@@ -18,21 +18,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(PrimordialBlocks.AMBER_BLOCK);
-        blockWithItem(PrimordialBlocks.AMBER_ORE);
-        blockWithItem(PrimordialBlocks.DEEPSLATE_AMBER_ORE);
-        blockWithItem(PrimordialBlocks.BLACK_SAND);
-        blockWithItem(PrimordialBlocks.SILTSTONE);
-        blockWithItem(PrimordialBlocks.GYPSUM);
-        blockWithItem(PrimordialBlocks.CHALK);
-        blockWithItem(PrimordialBlocks.MUDSTONE);
-        blockWithItem(PrimordialBlocks.LOAM);
-        blockWithItem(PrimordialBlocks.LIMESTONE);
-        blockWithItem(PrimordialBlocks.SHALE);
-        blockWithItem(PrimordialBlocks.PEAT);
-        blockWithItem(PrimordialBlocks.DRIED_SALT);
-        blockWithItem(PrimordialBlocks.SILT);
-        blockWithItem(PrimordialBlocks.WHITE_SAND);
+
         blockWithItem(PrimordialBlocks.POLISHED_CHALK);
         blockWithItem(PrimordialBlocks.POLISHED_LIMESTONE);
         blockWithItem(PrimordialBlocks.POLISHED_MUDSTONE);
@@ -53,7 +39,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(PrimordialBlocks.SEQUOIADENDRON_LOG.get(), models().withExistingParent("primordial:sequoiadendron_log", "minecraft:block/cube_column"));
         simpleBlockItem(PrimordialBlocks.SEQUOIADENDRON_WOOD.get(), models().withExistingParent("primordial:sequoiadendron_wood", "minecraft:block/cube_column"));
         simpleBlockItem(PrimordialBlocks.STRIPPED_SEQUOIADENDRON_LOG.get(), models().withExistingParent("primordial:stripped_sequoiadendron_log", "minecraft:block/cube_column"));
-        simpleBlockItem(PrimordialBlocks.STRIPPED_SEQUOIADENDRON_WOOD.get(), models().withExistingParent("primordial:stripped_sequoiadendron_log", "minecraft:block/cube_column"));
+        simpleBlockItem(PrimordialBlocks.STRIPPED_SEQUOIADENDRON_WOOD.get(), models().withExistingParent("primordial:stripped_sequoiadendron_wood", "minecraft:block/cube_column"));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
