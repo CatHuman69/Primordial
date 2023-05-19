@@ -47,6 +47,11 @@
   "block.primordial.stripped_sequoiadendron_log": "Stripped Sequoiadendron log",
   "block.primordial.stripped_sequoiadendron_wood": "Stripped Sequoiadendron Wood",
   "block.primordial.sequoiadendron_planks": "Sequoiadendron Planks",
+  "block.primordial.polished_shale": "Polished Shale",
+  "block.primordial.polished_mudstone": "Polished Mudstone",
+  "block.primordial.polished_siltstone": "Polished Siltstone",
+  "block.primordial.polished_chalk": "Polished Chalk",
+  "block.primordial.polished_limestone": "Polished Limestone",
 
  "creativemodetab.primordial_miscellaneous" : "Primordial Miscellaneous",
   "creativemodetab.primordial_blocks": "Primordial Blocks"

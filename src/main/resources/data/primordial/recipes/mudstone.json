@@ -2,16 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:amber"
+    "C": {
+      "item": "minecraft:cobblestone"
+    },
+    "Q": {
+      "item": "minecraft:packed_mud"
     }
   },
   "pattern": [
-    "###",
-    "###",
-    "###"
+    "CQ",
+    "QC"
   ],
   "result": {
+    "count": 2,
     "item": "primordial:mudstone"
   }
 }

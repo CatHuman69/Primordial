@@ -1,8 +1,8 @@
 package net.craftycatdevs.primordial.common.datagen;
 
 import net.craftycatdevs.primordial.Primordial;
-import net.craftycatdevs.primordial.common.worldgen.feature.configurations.PrimordialConfiguredFeatures;
-import net.craftycatdevs.primordial.common.worldgen.feature.configurations.PrimordialPlacedFeatures;
+import net.craftycatdevs.primordial.common.worldgen.feature.PrimordialConfiguredFeatures;
+import net.craftycatdevs.primordial.common.worldgen.feature.PrimordialPlacedFeatures;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;

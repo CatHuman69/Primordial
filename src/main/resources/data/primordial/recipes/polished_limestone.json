@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:amber"
+    "S": {
+      "item": "primordial:limestone"
     }
   },
   "pattern": [
-    "###",
-    "###",
-    "###"
+    "SS",
+    "SS"
   ],
   "result": {
-    "item": "primordial:mudstone"
+    "count": 4,
+    "item": "primordial:polished_limestone"
   }
 }

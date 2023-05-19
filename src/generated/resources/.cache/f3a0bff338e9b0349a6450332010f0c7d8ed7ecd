@@ -1,4 +1,4 @@
-// 1.19.3	2023-05-18T18:31:06.6012175	Block States: primordial
+// 1.19.3	2023-05-18T23:12:12.4390936	Block States: primordial
 5d29489a9455a9d3bfa998dc320154a8a0e62b09 assets/primordial/blockstates/polished_chalk.json
 34aa2da1e97fcd1ef78551176c751672be48d436 assets/primordial/blockstates/polished_limestone.json
 1b28bae4eabf7b2d7075ddc58c07cd39bc49bce0 assets/primordial/blockstates/polished_mudstone.json
@@ -37,4 +37,4 @@ c8a283cde145853f51277d29b080f869a5170bb1 assets/primordial/models/item/sequoiade
 d5cda7a7fdb314404a9997c4cbd5f2a421a4f08b assets/primordial/models/item/sequoiadendron_planks.json
 a4c51c8a4ff112d58fe5bf782c2360f92a2a68a9 assets/primordial/models/item/sequoiadendron_wood.json
 fa344439b96a45109d8680edb47344efc3b4763e assets/primordial/models/item/stripped_sequoiadendron_log.json
-fa344439b96a45109d8680edb47344efc3b4763e assets/primordial/models/item/stripped_sequoiadendron_wood.json
+33494abf238f869e55275f0082cbe39753f82c62 assets/primordial/models/item/stripped_sequoiadendron_wood.json

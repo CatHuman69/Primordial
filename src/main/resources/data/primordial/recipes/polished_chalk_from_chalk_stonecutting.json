@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "primordial:chalk"
+  },
+  "result": "primordial:polished_chalk"
+}

@@ -1,6 +1,6 @@
 package net.craftycatdevs.primordial.common.worldgen.feature.tree;
 
-import net.craftycatdevs.primordial.common.worldgen.feature.configurations.PrimordialConfiguredFeatures;
+import net.craftycatdevs.primordial.common.worldgen.feature.PrimordialConfiguredFeatures;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;
