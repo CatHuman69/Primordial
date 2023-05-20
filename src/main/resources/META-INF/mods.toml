@@ -58,13 +58,6 @@ you will be suprised by what you will find...
     ordering="NONE"
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
-[[dependencies.primordial]] #optional
-    # the modid of the dependency
-    modId="geckolib" #mandatory
-    mandatory=true #mandatory
-    versionRange="[3.1.40,)" #mandatory
-    ordering="NONE"
-    side="BOTH"
 # Here's another dependency
 [[dependencies.primordial]]
     modId="minecraft"

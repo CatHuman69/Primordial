@@ -89,19 +89,19 @@ public class PrimordialBlocks {
 
 
     public static final RegistryObject<Block> SEQUOIADENDRON_LOG = registerBlock("sequoiadendron_log",
-            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.SPRUCE_LOG).strength(2F).sound(SoundType.WOOD)));
+            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.SPRUCE_LOG).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> SEQUOIADENDRON_WOOD = registerBlock("sequoiadendron_wood",
-            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD).strength(2F).sound(SoundType.WOOD)));
+            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> STRIPPED_SEQUOIADENDRON_LOG = registerBlock("stripped_sequoiadendron_log",
-            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_LOG).strength(2F).sound(SoundType.WOOD)));
+            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_LOG).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> STRIPPED_SEQUOIADENDRON_WOOD = registerBlock("stripped_sequoiadendron_wood",
-            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_WOOD).strength(2F).sound(SoundType.WOOD)));
+            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> SEQUOIADENDRON_PLANKS = registerBlock("sequoiadendron_planks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS).strength(2F).sound(SoundType.WOOD)){
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)){
 
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
@@ -120,7 +120,7 @@ public class PrimordialBlocks {
             });
 
     public static final RegistryObject<Block> SEQUOIADENDRON_LEAVES = registerBlock("sequoiadendron_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_LEAVES).strength(2F).sound(SoundType.GRASS)){
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_LEAVES).sound(SoundType.GRASS)){
 
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
