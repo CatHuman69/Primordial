@@ -2,7 +2,6 @@ package net.craftycatdevs.primordial.common.worldgen.feature;
 
 
 import net.craftycatdevs.primordial.Primordial;
-import net.craftycatdevs.primordial.common.worldgen.feature.PrimordialConfiguredFeatures;
 import net.craftycatdevs.primordial.common.worldgen.placement.PrimordialOrePlacement;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;

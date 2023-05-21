@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "primordial:block/overgrown_black_sand" },
+            { "model": "primordial:block/overgrown_black_sand", "y": 90 },
+            { "model": "primordial:block/overgrown_black_sand", "y": 180 },
+            { "model": "primordial:block/overgrown_black_sand", "y": 270 }
+        ]
+    }
+}

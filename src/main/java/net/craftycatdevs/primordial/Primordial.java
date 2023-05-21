@@ -2,7 +2,7 @@ package net.craftycatdevs.primordial;
 
 import com.mojang.logging.LogUtils;
 import net.craftycatdevs.primordial.init.PrimordialBlocks;
-import net.craftycatdevs.primordial.init.PrimordialCreativeModeTabs;
+import net.craftycatdevs.primordial.init.PrimordialTabs;
 import net.craftycatdevs.primordial.init.PrimordialItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -41,14 +41,14 @@ public class Primordial {
 
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
-        if(event.getTab() == PrimordialCreativeModeTabs.PRIMORDIAL_MISCELLANEOUS) {
+        if(event.getTab() == PrimordialTabs.PRIMORDIAL_MISCELLANEOUS) {
             event.accept(PrimordialItems.AMBER);
             event.accept(PrimordialItems.AMBER_MOSQUITO);
             event.accept(PrimordialItems.AMBER_APHID);
             event.accept(PrimordialItems.GYPSUM_POWDER);
         }
 
-        if(event.getTab() == PrimordialCreativeModeTabs.PRIMORDIAL_BLOCKS) {
+        if(event.getTab() == PrimordialTabs.PRIMORDIAL_BLOCKS) {
             event.accept(PrimordialBlocks.AMBER_BLOCK);
             event.accept(PrimordialBlocks.AMBER_ORE);
             event.accept(PrimordialBlocks.DEEPSLATE_AMBER_ORE);
@@ -63,6 +63,7 @@ public class Primordial {
             event.accept(PrimordialBlocks.SILT);
             event.accept(PrimordialBlocks.PEAT);
             event.accept(PrimordialBlocks.DRIED_SALT);
+            event.accept(PrimordialBlocks.OVERGROWN_BLACK_SAND);
             event.accept(PrimordialBlocks.BLACK_SAND);
             event.accept(PrimordialBlocks.BLACK_SANDSTONE);
             event.accept(PrimordialBlocks.CHISELED_BLACK_SANDSTONE);
@@ -77,6 +78,7 @@ public class Primordial {
             event.accept(PrimordialBlocks.POLISHED_MUDSTONE);
             event.accept(PrimordialBlocks.POLISHED_SILTSTONE);
             event.accept(PrimordialBlocks.POLISHED_CHALK);
+            event.accept(PrimordialBlocks.REINFORCED_GLASS);
             event.accept(PrimordialBlocks.SEQUOIADENDRON_LEAVES);
             event.accept(PrimordialBlocks.SEQUOIADENDRON_LOG);
             event.accept(PrimordialBlocks.SEQUOIADENDRON_WOOD);

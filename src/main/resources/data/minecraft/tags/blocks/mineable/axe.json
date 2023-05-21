@@ -1,10 +1,8 @@
 {
   "replace": false,
   "values": [
-    "primordial:sequoiadendron_log",
     "primordial:sequoiadendron_wood",
-    "primordial:stripped_sequoiadendron_log",
-    "primordial:stripped_sequoiadendron_wood",
-    "primordial:sequoiadendron_plank"
+    "primordial:sequoiadendron_log",
+    "primordial:sequoiadendron_planks"
   ]
 }

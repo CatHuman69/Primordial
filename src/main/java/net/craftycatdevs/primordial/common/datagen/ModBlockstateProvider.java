@@ -11,8 +11,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModBlockStateProvider extends BlockStateProvider {
-    public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+public class ModBlockstateProvider extends BlockStateProvider {
+    public ModBlockstateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, Primordial.MODID, exFileHelper);
     }
 

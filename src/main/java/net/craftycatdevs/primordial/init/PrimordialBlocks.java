@@ -1,20 +1,23 @@
 package net.craftycatdevs.primordial.init;
 
 import net.craftycatdevs.primordial.Primordial;
+import net.craftycatdevs.primordial.client.handler.ColorHandler;
+import net.craftycatdevs.primordial.common.block.LeavesBlockPrimordial;
 import net.craftycatdevs.primordial.common.block.LogBlockPrimordial;
+import net.craftycatdevs.primordial.common.block.PlanksBlockPrimordial;
 import net.craftycatdevs.primordial.common.worldgen.feature.tree.SequoiadendronTreeFeature;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -56,6 +59,8 @@ public class PrimordialBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_BLACK).strength(0.5F).sound(SoundType.GRAVEL)));
     public static final RegistryObject<Block> BLACK_SAND = registerBlock("black_sand",
             () -> new SandBlock(14406560, BlockBehaviour.Properties.copy(Blocks.SAND).strength(0.5F).sound(SoundType.SAND)));
+    public static final RegistryObject<Block> OVERGROWN_BLACK_SAND = registerBlock("overgrown_black_sand",
+            () -> new SandBlock(14406560, BlockBehaviour.Properties.copy(Blocks.SAND).strength(0.5F).sound(SoundType.SAND)));
     public static final RegistryObject<Block> BLACK_SANDSTONE = registerBlock("black_sandstone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SANDSTONE).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(0.8F)));
     public static final RegistryObject<Block> CHISELED_BLACK_SANDSTONE = registerBlock("chiseled_black_sandstone",
@@ -86,65 +91,24 @@ public class PrimordialBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> POLISHED_MUDSTONE  = registerBlock("polished_mudstone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
-
-
-    public static final RegistryObject<Block> SEQUOIADENDRON_LOG = registerBlock("sequoiadendron_log",
-            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.SPRUCE_LOG).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
-
-    public static final RegistryObject<Block> SEQUOIADENDRON_WOOD = registerBlock("sequoiadendron_wood",
-            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
-
-    public static final RegistryObject<Block> STRIPPED_SEQUOIADENDRON_LOG = registerBlock("stripped_sequoiadendron_log",
-            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_LOG).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
-
-    public static final RegistryObject<Block> STRIPPED_SEQUOIADENDRON_WOOD = registerBlock("stripped_sequoiadendron_wood",
-            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
-
-    public static final RegistryObject<Block> SEQUOIADENDRON_PLANKS = registerBlock("sequoiadendron_planks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)){
-
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return true;
-                }
-
-                @Override
-                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 5;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 20;
-                }
-            });
-
-    public static final RegistryObject<Block> SEQUOIADENDRON_LEAVES = registerBlock("sequoiadendron_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_LEAVES).sound(SoundType.GRASS)){
-
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return true;
-                }
-
-                @Override
-                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 30;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 60;
-                }
-            });
-
-    public static final RegistryObject<Block> SEQUOIADENDRON_SAPLING = registerBlock("sequoiadendron_sapling",
-            () -> new SaplingBlock(new SequoiadendronTreeFeature(), BlockBehaviour.Properties.copy(Blocks.SPRUCE_SAPLING).sound(SoundType.GRASS)));
-
     public static final RegistryObject<Block> REINFORCED_GLASS  = registerBlock("reinforced_glass",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(0.9F).sound(SoundType.GLASS).requiresCorrectToolForDrops()));
 
 
+    public static final RegistryObject<Block> SEQUOIADENDRON_LOG = registerBlock("sequoiadendron_log",
+            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.SPRUCE_LOG).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> SEQUOIADENDRON_WOOD = registerBlock("sequoiadendron_wood",
+            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> STRIPPED_SEQUOIADENDRON_LOG = registerBlock("stripped_sequoiadendron_log",
+            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_LOG).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> STRIPPED_SEQUOIADENDRON_WOOD = registerBlock("stripped_sequoiadendron_wood",
+            () -> new LogBlockPrimordial(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> SEQUOIADENDRON_SAPLING = registerBlock("sequoiadendron_sapling",
+            () -> new SaplingBlock(new SequoiadendronTreeFeature(), BlockBehaviour.Properties.copy(Blocks.SPRUCE_SAPLING).sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> SEQUOIADENDRON_PLANKS = registerBlock("sequoiadendron_planks",
+            () -> new PlanksBlockPrimordial());
+    public static final RegistryObject<Block> SEQUOIADENDRON_LEAVES = registerBlock("sequoiadendron_leaves",
+            () -> new LeavesBlockPrimordial());
 
 
 
@@ -155,10 +119,17 @@ public class PrimordialBlocks {
 
     }
 
-
     private static <T extends Block> RegistryObject<Item> registerBlockIten(String name, RegistryObject<T>block) {
         return PrimordialItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties()));
+    }
+
+    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientSideHandler {
+        @SubscribeEvent
+        public static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
+            ColorHandler.registerBlockColors(event);
+        }
     }
 
     public static void register(IEventBus eventBus) {
